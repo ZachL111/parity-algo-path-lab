@@ -1,0 +1,17 @@
+{
+  "repo": "parity-algo-path-lab",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 200,
+    "watch": 108
+  },
+  "terms": [
+    "input width",
+    "search depth",
+    "boundary pressure",
+    "complexity"
+  ]
+}
