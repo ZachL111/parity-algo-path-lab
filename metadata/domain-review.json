@@ -1,0 +1,73 @@
+{
+  "repo": "parity-algo-path-lab",
+  "language": "OCaml",
+  "category": "Algorithms",
+  "goal": "Package an OCaml local lab for path analysis with capacity fixtures, allocation and spill reports, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "input width",
+      "search depth",
+      "boundary pressure",
+      "complexity"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input width",
+      "signal": 69,
+      "slack": 26,
+      "drag": 8,
+      "confidence": 64,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "search depth",
+      "signal": 62,
+      "slack": 24,
+      "drag": 22,
+      "confidence": 49,
+      "score": 131,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "boundary pressure",
+      "signal": 79,
+      "slack": 35,
+      "drag": 9,
+      "confidence": 46,
+      "score": 212,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "complexity",
+      "signal": 78,
+      "slack": 51,
+      "drag": 9,
+      "confidence": 57,
+      "score": 237,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input width",
+      "signal": 76,
+      "slack": 32,
+      "drag": 24,
+      "confidence": 48,
+      "score": 160,
+      "lane": "ship"
+    }
+  ]
+}
